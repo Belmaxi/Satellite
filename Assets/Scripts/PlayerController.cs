@@ -13,7 +13,7 @@ enum State
 public class PlayerController : MonoBehaviour
 {
     State state = State.Idel;
-    private float speed = 1.14f;
+    public float speed = 1.14f;
     // Start is called before the first frame update
     void Start()
     {
