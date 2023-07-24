@@ -9,16 +9,13 @@ public class Item : MonoBehaviour
 
     public bool Pickable { get => pickable; set => pickable = value; }
 
-    private void Awake()
-    {
-        ItemManager.instance.AddItem(this);
-    }
 
     // Start is called before the first frame update
     void Start()
     {
         Pickable = false;
         coll = GetComponent<Collider2D>();
+        ItemManager.instance.AddItem(gameObject);
     }
 
 

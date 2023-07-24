@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class ItemManager : MonoBehaviour
 {
-    static public ItemManager instance;
-    private List<Item> items = new List<Item>();
+    public static ItemManager instance;
+    private List<GameObject> items = new List<GameObject>();
     // Start is called before the first frame update
 
     private void Awake()
@@ -17,24 +17,25 @@ public class ItemManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        List<Item> list = GetPickableItems();
+        List<GameObject> list = GetPickableItems();
         foreach (var item in list)
         {
             print(item);
         }
     }
 
-    public void AddItem(Item item)
+    public void AddItem(GameObject item)
     {
         items.Add(item);
     }
 
-    private List<Item> GetPickableItems()
+    private List<GameObject> GetPickableItems()
     {
-        List<Item> list = new List<Item>();
+        List<GameObject> list = new List<GameObject>();
         foreach (var item in items)
         {
-            if (item.Pickable)
+            Item itemScript = item.GetComponent<Item>();
+            if (itemScript.Pickable)
             {
                 list.Add(item);
             }
