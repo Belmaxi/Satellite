@@ -16601,8 +16601,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {x: 0, y: 0}
-  targetObj: {fileID: 0}
-  mode: 0
+  targetObj: {fileID: 298686279}
+  mode: 3
 --- !u!1 &1838964570
 GameObject:
   m_ObjectHideFlags: 0
@@ -19057,17 +19057,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2130847076005163947, guid: ae27ba9ab30470d44bf760fbd8884ee3, type: 3}
+      propertyPath: cameraInScene
+      value: 
+      objectReference: {fileID: 511053334}
     - target: {fileID: 2130847076005163949, guid: ae27ba9ab30470d44bf760fbd8884ee3, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 2130847076492251152, guid: ae27ba9ab30470d44bf760fbd8884ee3, type: 3}
-      propertyPath: m_SortingLayer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2130847076492251152, guid: ae27ba9ab30470d44bf760fbd8884ee3, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1441614813
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae27ba9ab30470d44bf760fbd8884ee3, type: 3}

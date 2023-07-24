@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private bool isPicked = false;
     private Item pick;
+    public Camera cameraInScene;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +32,7 @@ public class PlayerController : MonoBehaviour
         {
             PickItem();
         }
+        cameraInScene.transform.position = new Vector3(transform.position.x,transform.position.y,-10);
     }
 
     private void FixedUpdate()
