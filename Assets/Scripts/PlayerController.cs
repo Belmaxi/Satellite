@@ -13,7 +13,7 @@ enum State
 public class PlayerController : MonoBehaviour
 {
     State state = State.Idel;
-    public float speed = 1.14f;
+    public float speed =15f;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +22,10 @@ public class PlayerController : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+    }
+
+    private void FixedUpdate()
     {
         Move();
     }
