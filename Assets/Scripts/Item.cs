@@ -6,6 +6,7 @@ public class Item : MonoBehaviour
 {
     private Collider2D coll;
     private bool pickable;
+    private bool isPicked;
 
     public bool Pickable { get => pickable; set => pickable = value; }
 
@@ -15,7 +16,7 @@ public class Item : MonoBehaviour
     {
         Pickable = false;
         coll = GetComponent<Collider2D>();
-        ItemManager.instance.AddItem(gameObject);
+        ItemManager.instance.AddItem(this);
     }
 
 
@@ -33,5 +34,11 @@ public class Item : MonoBehaviour
         {
             Pickable = false;
         }
+    }
+
+    public void Destroy()
+    {
+        ItemManager.instance.RemoveItem(this);
+        Destroy(gameObject);
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "GameConfig", menuName = "GameConfig")]
 public class GameConfig : ScriptableObject
 {
-    [Tooltip("阳光")]
+    [Tooltip("物品")]
     public GameObject Sun;
 
     [Header("植物")]

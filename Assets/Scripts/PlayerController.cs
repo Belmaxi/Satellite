@@ -8,13 +8,16 @@ enum State
     Walk,
     Run,
     Collect,
-    Work
+    Work,
+    Picking
 }
 public class PlayerController : MonoBehaviour
 {
     State state = State.Idel;
     public float speed =15f;
     private Rigidbody2D rb;
+    private bool isPicked = false;
+    private Item pick;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,11 +27,16 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            PickItem();
+        }
     }
 
     private void FixedUpdate()
     {
         Move();
+        
     }
 
     void FSM()
@@ -45,6 +53,8 @@ public class PlayerController : MonoBehaviour
                 break;
             case State.Work:
                 break;
+            case State.Picking:
+                break;
         }
     }
 
@@ -53,5 +63,27 @@ public class PlayerController : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
         transform.Translate(new Vector2(horizontal, vertical) * speed * Time.deltaTime);
+        if(pick != null)
+        {
+            pick.gameObject.transform.position = transform.position;
+        }
+    }
+
+    void PickItem()
+    {
+        if (isPicked)
+        {
+            print("Something in your hand");
+            pick = null;
+            isPicked = false;
+            return;
+        }
+        List<Item> list = ItemManager.instance.GetPickableItems();
+        if(list.Count == 0) {
+            print("No Item To Pick");
+            return;
+        }
+        isPicked= true;
+        pick = list[0];
     }
 }
