@@ -11,7 +11,7 @@ TagManager:
   - Ground
   - Water
   - UI
-  - 
+  - Resource
   - 
   - 
   - 
@@ -49,4 +49,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 1441614813
+    locked: 0
+  - name: Resource
+    uniqueID: 642895139
     locked: 0
