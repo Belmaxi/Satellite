@@ -5,14 +5,13 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "GameConfig", menuName = "GameConfig")]
 public class GameConfig : ScriptableObject
 {
-    [Tooltip("物品")]
-    public GameObject Sun;
+    [Header("小游戏UI")]
+    [Tooltip("铸造炉")]
+    public GameObject Founderer;
 
-    [Header("植物")]
-    [Tooltip("向日葵")]
-    public GameObject SunFlower;
+    [Tooltip("冶炼炉")]
+    public GameObject Furnace;
 
-
-    [Tooltip("豌豆射手")]
-    public GameObject PeaShooter;
+    [Tooltip("发电机")]
+    public GameObject Dynamo;
 }

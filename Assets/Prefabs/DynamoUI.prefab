@@ -343,7 +343,7 @@ GameObject:
   - component: {fileID: 5240262417575223789}
   - component: {fileID: 2719232777062077136}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: DynamoUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
