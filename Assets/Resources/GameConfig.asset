@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d70f582dfd3a32c43b1a47de2d96dd8a, type: 3}
   m_Name: GameConfig
   m_EditorClassIdentifier: 
-  Sun: {fileID: 0}
-  SunFlower: {fileID: 0}
-  PeaShooter: {fileID: 0}
+  Founderer: {fileID: 0}
+  Furnace: {fileID: 0}
+  Dynamo: {fileID: 7958738902308716987, guid: 9e7ae4ef0cd243e43ab9c587f17f956e, type: 3}
