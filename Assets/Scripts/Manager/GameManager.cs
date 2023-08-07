@@ -14,6 +14,5 @@ public class GameManager : MonoBehaviour
     {
         Instance = this;
         config = Resources.Load<GameConfig>("GameConfig");
-
     }
 }

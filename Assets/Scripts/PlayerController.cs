@@ -67,7 +67,7 @@ public class PlayerController : MonoBehaviour
         transform.Translate(new Vector2(horizontal, vertical) * speed * Time.deltaTime);
         if(pick != null)
         {
-            pick.gameObject.transform.position = transform.position;
+            pick.gameObject.transform.position = transform.position + new Vector3(0f, 1f, 0f);
         }
     }
 
@@ -76,8 +76,11 @@ public class PlayerController : MonoBehaviour
         if (isPicked)
         {
             print("Something in your hand");
+            pick.IsPicked = false;
+            pick.Drop(transform.position);
             pick = null;
             isPicked = false;
+            
             return;
         }
         List<Item> list = ItemManager.instance.GetPickableItems();
@@ -86,6 +89,7 @@ public class PlayerController : MonoBehaviour
             return;
         }
         isPicked= true;
+        list[0].IsPicked = true;
         pick = list[0];
     }
 }
