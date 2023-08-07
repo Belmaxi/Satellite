@@ -545,13 +545,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 280166770, guid: ecc0073a441530147a7eb41fce50e2ac, type: 3}
-      propertyPath: delay
-      value: 0.14
-      objectReference: {fileID: 0}
     - target: {fileID: 1631893730606596181, guid: ecc0073a441530147a7eb41fce50e2ac, type: 3}
       propertyPath: m_Name
       value: MapCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 4639399071171215339, guid: ecc0073a441530147a7eb41fce50e2ac, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7531176887369155119, guid: ecc0073a441530147a7eb41fce50e2ac, type: 3}
       propertyPath: m_Pivot.x
