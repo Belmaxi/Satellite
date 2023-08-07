@@ -30,18 +30,18 @@ public class UIPointer : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     public void OnPointerEnter(PointerEventData eventData)
     {
         transform.localScale = new Vector2(1.05f, 1.05f);
-        //显示介绍
+        introduction.SetActive(true);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         transform.localScale = new Vector2(1f, 1f);
         //关闭介绍
+        introduction.SetActive(false);
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
         StopAllCoroutines();
-        //正式选择
     }
 }
