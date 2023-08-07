@@ -9,6 +9,7 @@ public class UIPointer : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 {
     private Image image;
     public float delay = 0.07f;
+    public GameObject introduction;
     private void Start()
     {
         image = GetComponent<Image>();
