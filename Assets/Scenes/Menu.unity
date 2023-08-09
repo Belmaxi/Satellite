@@ -654,10 +654,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: EngineAseembleGame
       objectReference: {fileID: 0}
-    - target: {fileID: 6122719437706989106, guid: 69c5b6373a06d094b97dd290f8617183, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8388281011911164834, guid: 69c5b6373a06d094b97dd290f8617183, type: 3}
       propertyPath: m_Pivot.x
       value: 0
