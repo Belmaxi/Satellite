@@ -19,10 +19,12 @@ public class PlayerController : MonoBehaviour
     private bool isPicked = false;
     private Item pick;
     public Camera cameraInScene;
+    private Animator m_animator;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        m_animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -31,13 +33,14 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             PickItem();
+            state = State.Collect;
         }
         cameraInScene.transform.position = new Vector3(transform.position.x,transform.position.y,-10);
     }
 
     private void FixedUpdate()
     {
-        Move();
+        FSM();
         
     }
 
@@ -46,12 +49,15 @@ public class PlayerController : MonoBehaviour
         switch(state)
         {
             case State.Idel:
+                Move();
                 break;
             case State.Walk:
+                Move();
                 break;
             case State.Run:
                 break;
             case State.Collect:
+                Move();
                 break;
             case State.Work:
                 break;
@@ -64,6 +70,21 @@ public class PlayerController : MonoBehaviour
     {
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
+        if(horizontal == 0f && vertical == 0f)
+        {
+            m_animator.SetBool("Move", false);
+        }
+        else if(horizontal > 0)
+        {
+            m_animator.SetBool("Move", true);
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
+        else
+        {
+            m_animator.SetBool("Move", true);
+            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
+        
         transform.Translate(new Vector2(horizontal, vertical) * speed * Time.deltaTime);
         if(pick != null)
         {
