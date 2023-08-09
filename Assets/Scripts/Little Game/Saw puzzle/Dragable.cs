@@ -4,13 +4,15 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Dragable : MonoBehaviour,IDragHandler
+public class Dragable : MonoBehaviour,IDragHandler,IPointerUpHandler,IPointerDownHandler
 {
     private RectTransform rectTransform;
-    // Use this for initialization
+    private Vector3 startPos;
+    public Vector3 targetPos;
     void Start()
     {
         rectTransform = GetComponent<RectTransform>();
+        startPos = transform.localPosition;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -19,4 +21,18 @@ public class Dragable : MonoBehaviour,IDragHandler
         RectTransformUtility.ScreenPointToWorldPointInRectangle(rectTransform, eventData.position, eventData.enterEventCamera, out pos);
         rectTransform.position = pos;
     }
+
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        if((targetPos - transform.localPosition).magnitude <= 50f)
+        {
+            transform.localPosition = targetPos;
+        }
+        else
+        {
+            transform.localPosition = startPos;
+        }
+    }
+
+    public void OnPointerDown(PointerEventData eventData) { }
 }
