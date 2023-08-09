@@ -340,8 +340,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.3582, y: 0.03694153}
+  m_SizeDelta: {x: 593.8134, y: 124.05}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7081990270851959172
 CanvasRenderer:
@@ -1078,7 +1078,7 @@ GameObject:
   - component: {fileID: 7081990271848426892}
   - component: {fileID: 7081990271848426893}
   m_Layer: 5
-  m_Name: Zhyin
+  m_Name: Gameback
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
