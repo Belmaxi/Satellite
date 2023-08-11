@@ -654,6 +654,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EngineTestGame
       objectReference: {fileID: 0}
+    - target: {fileID: 927683359431270210, guid: bf0c3d04019963645b24942cd9a81c71, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 927683359431270222, guid: bf0c3d04019963645b24942cd9a81c71, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -737,6 +741,30 @@ PrefabInstance:
     - target: {fileID: 927683359431270222, guid: bf0c3d04019963645b24942cd9a81c71, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7968982894517359826, guid: bf0c3d04019963645b24942cd9a81c71, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7968982894517359826, guid: bf0c3d04019963645b24942cd9a81c71, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 44c4b55b44b961e45a9b9fdef745a278, type: 3}
+    - target: {fileID: 7968982894517359826, guid: bf0c3d04019963645b24942cd9a81c71, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7968982894517359826, guid: bf0c3d04019963645b24942cd9a81c71, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7968982894517359826, guid: bf0c3d04019963645b24942cd9a81c71, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7968982894517359826, guid: bf0c3d04019963645b24942cd9a81c71, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf0c3d04019963645b24942cd9a81c71, type: 3}
