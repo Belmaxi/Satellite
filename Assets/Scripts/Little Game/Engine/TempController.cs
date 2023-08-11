@@ -13,6 +13,7 @@ public class TempController : MonoBehaviour
     /// </summary>
     public GameObject arrow;
     public GameObject highLight;
+    public GameObject line;
 
     private Vector2 pos;
     private int successTime;
@@ -58,7 +59,7 @@ public class TempController : MonoBehaviour
     IEnumerator DoColorChange()
     {
         onError = true;
-        Image image = GetComponent<Image>();
+        Image image = line.GetComponent<Image>();
         image.color = Color.red;
         float tmp = arrow.GetComponent<Arrow>().speed;
         arrow.GetComponent<Arrow>().speed = 0f;
