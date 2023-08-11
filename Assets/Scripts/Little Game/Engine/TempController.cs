@@ -19,7 +19,6 @@ public class TempController : MonoBehaviour
     private int errorTime;
 
     private bool onError = false;
-
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.F) && !onError)
