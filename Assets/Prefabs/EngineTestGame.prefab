@@ -2357,6 +2357,7 @@ GameObject:
   - component: {fileID: 6029910120508414164}
   - component: {fileID: 6009566972629563837}
   - component: {fileID: 8561972052809872206}
+  - component: {fileID: 1396098938}
   m_Layer: 5
   m_Name: Arrow
   m_TagString: Untagged
@@ -2381,7 +2382,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 130, y: -52.8}
+  m_AnchoredPosition: {x: 343.1, y: -52.8}
   m_SizeDelta: {x: 386, y: 640}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6009566972629563837
@@ -2422,6 +2423,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1396098938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6404248778814587776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89bdff64d9d2ace4bb9112916cdd5d5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startPosition: {x: 11.5, y: -52.8}
+  endPosition: {x: 343.1, y: -52.8}
+  speed: 1
 --- !u!1 &6998711299986484112
 GameObject:
   m_ObjectHideFlags: 0
@@ -2509,6 +2525,7 @@ GameObject:
   - component: {fileID: 8338874531915264678}
   - component: {fileID: 8078715135987946812}
   - component: {fileID: 4374331480919454524}
+  - component: {fileID: 937352884}
   m_Layer: 5
   m_Name: line
   m_TagString: Untagged
@@ -2574,6 +2591,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &937352884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7917356187029101112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af5101c3d973e104bb491df305da7e1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startPosition: 0
+  endPosition: 0
+  range: 10
+  arrow: {fileID: 6404248778814587776}
+  highLight: {fileID: 6998711299986484112}
 --- !u!1 &7968982894210463398
 GameObject:
   m_ObjectHideFlags: 0
@@ -2640,7 +2674,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6f37186493086ef40a43c66806f98aa0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aae1aa222f80b44428deb3ccc0ffbc66, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2711,15 +2745,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.29383236, g: 0.6402512, b: 0.8773585, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 44c4b55b44b961e45a9b9fdef745a278, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
