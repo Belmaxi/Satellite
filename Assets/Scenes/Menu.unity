@@ -751,6 +751,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1662267189, guid: bf0c3d04019963645b24942cd9a81c71, type: 3}
+      propertyPath: range
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 927683359431270210, guid: bf0c3d04019963645b24942cd9a81c71, type: 3}
       propertyPath: m_Name
       value: EngineTestGame
@@ -838,6 +842,10 @@ PrefabInstance:
     - target: {fileID: 927683359431270222, guid: bf0c3d04019963645b24942cd9a81c71, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6800492005019925619, guid: bf0c3d04019963645b24942cd9a81c71, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 323
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf0c3d04019963645b24942cd9a81c71, type: 3}

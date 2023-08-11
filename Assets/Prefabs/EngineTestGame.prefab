@@ -392,6 +392,7 @@ GameObject:
   - component: {fileID: 927683359431270223}
   - component: {fileID: 927683359431270220}
   - component: {fileID: 927683359431270221}
+  - component: {fileID: 1662267189}
   m_Layer: 5
   m_Name: EngineTestGame
   m_TagString: Untagged
@@ -505,6 +506,24 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &1662267189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927683359431270210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af5101c3d973e104bb491df305da7e1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startPosition: 29
+  endPosition: 323
+  range: 10
+  arrow: {fileID: 6404248778814587776}
+  highLight: {fileID: 6998711299986484112}
+  line: {fileID: 7917356187029101112}
 --- !u!1 &927683359592494538
 GameObject:
   m_ObjectHideFlags: 0
@@ -2435,7 +2454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89bdff64d9d2ace4bb9112916cdd5d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPosition: {x: 11.5, y: -52.8}
+  startPosition: {x: 15, y: -52.8}
   endPosition: {x: 343.1, y: -52.8}
   speed: 1
 --- !u!1 &6998711299986484112
@@ -2473,7 +2492,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 135.5, y: -110.6}
+  m_AnchoredPosition: {x: 323, y: -110.6}
   m_SizeDelta: {x: 909, y: 537}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6020316691596738472
@@ -2525,7 +2544,6 @@ GameObject:
   - component: {fileID: 8338874531915264678}
   - component: {fileID: 8078715135987946812}
   - component: {fileID: 4374331480919454524}
-  - component: {fileID: 937352884}
   m_Layer: 5
   m_Name: line
   m_TagString: Untagged
@@ -2591,23 +2609,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &937352884
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7917356187029101112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af5101c3d973e104bb491df305da7e1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startPosition: 0
-  endPosition: 0
-  range: 10
-  arrow: {fileID: 6404248778814587776}
-  highLight: {fileID: 6998711299986484112}
 --- !u!1 &7968982894210463398
 GameObject:
   m_ObjectHideFlags: 0
