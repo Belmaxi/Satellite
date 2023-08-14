@@ -29,6 +29,11 @@ public class TempController : MonoBehaviour
                 successTime++;
                 highLight.transform.localPosition = GetNewPosition();
                 print("flash");
+                if(successTime == 6)
+                {
+                    gameObject.SetActive(false);
+                    LittleGameManager.instance.Achieve(AchieveState.engine);
+                }
             }
             else
             {
