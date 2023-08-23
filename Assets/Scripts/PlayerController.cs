@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         m_animator = GetComponent<Animator>();
+        m_animator.SetBool("IdelRight", true);
     }
 
     // Update is called once per frame
@@ -54,15 +55,72 @@ public class PlayerController : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
         if (horizontal > 0)
         {
+            m_animator.SetBool("IdelRight", false);
+            m_animator.SetBool("IdelLeft", false);
+            m_animator.SetBool("IdelForward", false);
+            m_animator.SetBool("IdelBack", false);
+
             m_animator.SetBool("MoveRight", true);
-            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+
+            m_animator.SetBool("MoveLeft", false);
+            m_animator.SetBool("MoveForward", false);
+            m_animator.SetBool("MoveBack", false);
+            print("1");
+        }
+        else if(horizontal < 0)
+        {
+            m_animator.SetBool("IdelRight", false);
+            m_animator.SetBool("IdelLeft", false);
+            m_animator.SetBool("IdelForward", false);
+            m_animator.SetBool("IdelBack", false);
+            m_animator.SetBool("MoveRight", false);
+
+            m_animator.SetBool("MoveLeft", true);
+
+            m_animator.SetBool("MoveForward", false);
+            m_animator.SetBool("MoveBack", false);
+            print("2");
+        }
+        else if(vertical < 0)
+        {
+            print("3");
+            m_animator.SetBool("IdelRight", false);
+            m_animator.SetBool("IdelLeft", false);
+            m_animator.SetBool("IdelForward", false);
+            m_animator.SetBool("IdelBack", false);
+            m_animator.SetBool("MoveRight", false);
+            m_animator.SetBool("MoveLeft", false);
+
+            m_animator.SetBool("MoveForward", true);
+
+            m_animator.SetBool("MoveBack", false);
+        }
+        else if(vertical > 0)
+        {
+            print("4");
+            m_animator.SetBool("IdelRight", false);
+            m_animator.SetBool("IdelLeft", false);
+            m_animator.SetBool("IdelForward", false);
+            m_animator.SetBool("IdelBack", false);
+            m_animator.SetBool("MoveRight", false);
+            m_animator.SetBool("MoveLeft", false);
+            m_animator.SetBool("MoveForward", false);
+
+            m_animator.SetBool("MoveBack", true);
         }
         else
         {
-            m_animator.SetBool("MoveLeft", true);
-            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-        }
+            print("5");
+            m_animator.SetBool("MoveRight", false);
+            m_animator.SetBool("MoveLeft", false);
+            m_animator.SetBool("MoveForward", false);
+            m_animator.SetBool("MoveBack", false);
 
+            m_animator.SetBool("IdelRight", true);
+            m_animator.SetBool("IdelLeft", true);
+            m_animator.SetBool("IdelForward", true);
+            m_animator.SetBool("IdelBack", true);
+        }    
         transform.Translate(new Vector2(horizontal, vertical) * speed * Time.deltaTime);
         if (pick != null)
         {
