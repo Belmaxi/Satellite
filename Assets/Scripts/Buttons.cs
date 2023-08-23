@@ -9,15 +9,23 @@ public class Buttons : MonoBehaviour
 {
     private Button button;
 
+    /// <summary>
+    /// 场景从menu传送到main
+    /// </summary>
     public void ChangeToSelection()
     {
         MenuManager.instance.menu.SetActive(false);
         MenuManager.instance.map.SetActive(true);
     }
 
-    public void Resume()
+    /// <summary>
+    /// 小游戏界面清除
+    /// </summary>
+    public void Resume(GameObject obj)
     {
-
+        PlayerManager.instance.Resume();
+        Destroy(obj);
+        
     }
 
     public void Exit()
