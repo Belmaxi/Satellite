@@ -15,6 +15,11 @@ public class Buttons : MonoBehaviour
         MenuManager.instance.map.SetActive(true);
     }
 
+    public void Resume()
+    {
+
+    }
+
     public void Exit()
     {
         #if UNITY_EDITOR
