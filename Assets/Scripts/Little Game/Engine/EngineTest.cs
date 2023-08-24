@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TempController : MonoBehaviour
+public class EngineTest : MonoBehaviour
 {
     public float startPosition;
     public float endPosition;
