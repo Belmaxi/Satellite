@@ -21,29 +21,26 @@ public class Buttons : MonoBehaviour
     /// <summary>
     /// 小游戏界面清除
     /// </summary>
-    public void ResumeFromPuzzle(GameObject obj, GameObject[] puzzles)
+    public void ResumeFromPuzzle(GameObject obj)
     {
-        foreach (GameObject puzzle in puzzles)
+        PuzzleChecker puzzleChecker = obj.GetComponent<PuzzleChecker>();
+        if (!puzzleChecker.isok())
         {
-            Dragable drag = puzzle.GetComponent<Dragable>();
-            if (!drag.IsTargeted)
-            {
-                return;
-            }
+            return;
         }
         PlayerManager.instance.Resume();
         Destroy(obj);
-        
+
     }
 
     public void Exit()
     {
-        #if UNITY_EDITOR
-            UnityEditor.EditorApplication.isPlaying = false;
-        #else
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
             Application.Quit();
-        #endif
+#endif
     }
 
-    
+
 }
