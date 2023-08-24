@@ -9,6 +9,11 @@ public class Dragable : MonoBehaviour,IDragHandler,IPointerUpHandler,IPointerDow
     private RectTransform rectTransform;
     private Vector3 startPos;
     public Vector3 targetPos;
+
+    private bool isTargeted = false;
+
+    public bool IsTargeted { get => isTargeted; set => isTargeted = value; }
+
     void Start()
     {
         rectTransform = GetComponent<RectTransform>();
@@ -27,10 +32,12 @@ public class Dragable : MonoBehaviour,IDragHandler,IPointerUpHandler,IPointerDow
         if((targetPos - transform.localPosition).magnitude <= 50f)
         {
             transform.localPosition = targetPos;
+            IsTargeted = true;
         }
         else
         {
             transform.localPosition = startPos;
+            IsTargeted = false;
         }
     }
 

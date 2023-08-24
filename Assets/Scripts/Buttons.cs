@@ -21,8 +21,16 @@ public class Buttons : MonoBehaviour
     /// <summary>
     /// 小游戏界面清除
     /// </summary>
-    public void Resume(GameObject obj)
+    public void ResumeFromPuzzle(GameObject obj, GameObject[] puzzles)
     {
+        foreach (GameObject puzzle in puzzles)
+        {
+            Dragable drag = puzzle.GetComponent<Dragable>();
+            if (!drag.IsTargeted)
+            {
+                return;
+            }
+        }
         PlayerManager.instance.Resume();
         Destroy(obj);
         
