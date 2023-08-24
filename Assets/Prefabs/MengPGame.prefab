@@ -750,8 +750,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.5192, y: 1.0384}
-  m_SizeDelta: {x: 157.9234, y: 33.4982}
+  m_AnchoredPosition: {x: 0.000034988, y: 6.9}
+  m_SizeDelta: {x: 166.0334, y: 33.4982}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2344243481251355662
 CanvasRenderer:
@@ -835,7 +835,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 6754185398366854399}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.7
+  m_Size: 0.5
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3324,3 +3324,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.1
   power: 0.05
+  downLimit: 0.5
+  upLimit: 0.9

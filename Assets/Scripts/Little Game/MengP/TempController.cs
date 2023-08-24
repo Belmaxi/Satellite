@@ -8,6 +8,9 @@ public class TempController : MonoBehaviour
     private Scrollbar bar;
     public float speed = 1f;
     public float power = 0.1f;
+
+    public float downLimit = 0.5f;
+    public float upLimit = 0.9f;
     private void Start()
     {
         bar = GetComponentInChildren<Scrollbar>();
@@ -16,6 +19,10 @@ public class TempController : MonoBehaviour
     void Update()
     {
         bar.size -= speed * Time.deltaTime;
+        if(bar.size <= downLimit || bar.size >= upLimit)
+        {
+            Destroy(gameObject.transform.parent.gameObject);
+        }
         Jump();
     }
 
