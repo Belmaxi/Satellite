@@ -72,6 +72,7 @@ public class PlayerController : MonoBehaviour
             m_animator.SetBool("IdelLeft", false);
             m_animator.SetBool("IdelForward", false);
             m_animator.SetBool("IdelBack", false);
+
             m_animator.SetBool("MoveRight", false);
 
             m_animator.SetBool("MoveLeft", true);
@@ -85,6 +86,7 @@ public class PlayerController : MonoBehaviour
             m_animator.SetBool("IdelLeft", false);
             m_animator.SetBool("IdelForward", false);
             m_animator.SetBool("IdelBack", false);
+
             m_animator.SetBool("MoveRight", false);
             m_animator.SetBool("MoveLeft", false);
 
@@ -98,6 +100,7 @@ public class PlayerController : MonoBehaviour
             m_animator.SetBool("IdelLeft", false);
             m_animator.SetBool("IdelForward", false);
             m_animator.SetBool("IdelBack", false);
+
             m_animator.SetBool("MoveRight", false);
             m_animator.SetBool("MoveLeft", false);
             m_animator.SetBool("MoveForward", false);
