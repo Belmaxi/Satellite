@@ -65,7 +65,6 @@ public class PlayerController : MonoBehaviour
             m_animator.SetBool("MoveLeft", false);
             m_animator.SetBool("MoveForward", false);
             m_animator.SetBool("MoveBack", false);
-            print("1");
         }
         else if(horizontal < 0)
         {
@@ -79,11 +78,9 @@ public class PlayerController : MonoBehaviour
 
             m_animator.SetBool("MoveForward", false);
             m_animator.SetBool("MoveBack", false);
-            print("2");
         }
         else if(vertical < 0)
         {
-            print("3");
             m_animator.SetBool("IdelRight", false);
             m_animator.SetBool("IdelLeft", false);
             m_animator.SetBool("IdelForward", false);
@@ -97,7 +94,6 @@ public class PlayerController : MonoBehaviour
         }
         else if(vertical > 0)
         {
-            print("4");
             m_animator.SetBool("IdelRight", false);
             m_animator.SetBool("IdelLeft", false);
             m_animator.SetBool("IdelForward", false);
@@ -110,7 +106,6 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            print("5");
             m_animator.SetBool("MoveRight", false);
             m_animator.SetBool("MoveLeft", false);
             m_animator.SetBool("MoveForward", false);
