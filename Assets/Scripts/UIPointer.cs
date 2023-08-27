@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 
 public class UIPointer : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
@@ -43,5 +44,6 @@ public class UIPointer : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     public void OnPointerClick(PointerEventData eventData)
     {
         StopAllCoroutines();
+        SceneManager.LoadScene("Main");   
     }
 }
