@@ -646,8 +646,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u8499\u76AE\u7194\u70BC\u5236\u4F5C"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f4dd965a1726def429b9429b5a8804bb, type: 2}
-  m_sharedMaterial: {fileID: 7713406326343246276, guid: f4dd965a1726def429b9429b5a8804bb, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1f7f3ac20c678e1409377a58967b07ee, type: 2}
+  m_sharedMaterial: {fileID: -7349842058797355493, guid: 1f7f3ac20c678e1409377a58967b07ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2276,7 +2276,7 @@ GameObject:
   - component: {fileID: 6313462869099233893}
   - component: {fileID: 6313462869099233892}
   m_Layer: 5
-  m_Name: Image
+  m_Name: BackGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2788,8 +2788,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u6309\u4E0B\u56DE\u8F66\u952E\u52A0\u67F4.\u8BF7\u4FDD\u6301\u6E29\u5EA6\u7684\u5408\u9002\u7684\u533A\u95F4\u5185"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f4dd965a1726def429b9429b5a8804bb, type: 2}
-  m_sharedMaterial: {fileID: 7713406326343246276, guid: f4dd965a1726def429b9429b5a8804bb, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1f7f3ac20c678e1409377a58967b07ee, type: 2}
+  m_sharedMaterial: {fileID: -7349842058797355493, guid: 1f7f3ac20c678e1409377a58967b07ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3129,7 +3129,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 569.6, y: 331.1}
+  m_AnchoredPosition: {x: 690, y: 349}
   m_SizeDelta: {x: 994, y: 644}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &7869694573563974823
