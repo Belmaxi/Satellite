@@ -1,39 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
 
 public class DialogManager : MonoBehaviour
 {
+    static public DialogManager instance;
+    public List<List<string>> list  = new List<List<string>>();
+    public GameObject dialog;
+    private List<string> str = new List<string>();
 
-    public GameObject DialogUI; //对话Panel
-    public Text DialogText; //Panel的子级Text
-    [TextArea(1, 3)] public string[] DialogTextList; //存放对话内容 前面的特性是为了在Inspector窗口中文字区域显示成三行
-    public int currentIndex;//对话数组索引
-    
-    public void CloseDialog() //点击Close执行；关闭对话Panel
+    private Dialog dia;
+
+    private void Awake()
     {
-        DialogUI.SetActive(false);
+        instance = this; 
+     
     }
 
-    public void ContinueDialog()    //点击Continue按钮执行；继续下句话
+    private void Insert()
     {
-        currentIndex++;
-        if (currentIndex < DialogTextList.Length)
-        {
-            DialogText.text = DialogTextList[currentIndex];
-        }
-        else
-        {
-            CloseDialog();
-        }
+        list.Add(str);
+        str.Clear();
+    }
+    private void Start()
+    {
+        dia = dialog.GetComponentInChildren<Dialog>();
+        str.Add("研究员你好，我是此次卫星制作的总负责人我将引导你完成卫星的制作。现在，发动机的制作出现了一些问题，请你去制造厂看看吧！");
+        Insert();
     }
 
-    private void OnEnable() //在激活对话面板按钮时触发，目的是为了使索引归0
+    public void ShowDialog(int index)
     {
-        currentIndex = 0;
-        DialogText.text = DialogTextList[currentIndex];
+        dia.SetDialog(list[index]);
     }
 
 }

@@ -14,4 +14,7 @@ public class GameConfig : ScriptableObject
 
     [Tooltip("发电机")]
     public GameObject Dynamo;
+
+    [Tooltip("对话框")]
+    public GameObject dialog;
 }
