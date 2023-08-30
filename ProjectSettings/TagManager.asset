@@ -15,7 +15,7 @@ TagManager:
   - Water
   - UI
   - Resource
-  - 
+  - Player
   - 
   - 
   - 
@@ -50,9 +50,9 @@ TagManager:
   - name: House
     uniqueID: 161761195
     locked: 0
-  - name: Player
-    uniqueID: 1441614813
-    locked: 0
   - name: Resource
     uniqueID: 642895139
+    locked: 0
+  - name: Player
+    uniqueID: 1441614813
     locked: 0
