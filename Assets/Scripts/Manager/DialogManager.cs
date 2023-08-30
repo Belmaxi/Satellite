@@ -44,7 +44,6 @@ public class DialogManager : MonoBehaviour
 
     public void ShowDialog()
     {
-        print(index);
         dia.SetDialog(list[index]);
         NextDialog();
     }

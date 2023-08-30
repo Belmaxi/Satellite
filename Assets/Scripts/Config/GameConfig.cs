@@ -17,4 +17,6 @@ public class GameConfig : ScriptableObject
 
     [Tooltip("¶Ô»°¿ò")]
     public GameObject dialog;
+
+    
 }
