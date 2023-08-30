@@ -7,7 +7,7 @@ public class NPCController : MonoBehaviour
     public int[] indexs;
     void Update()
     {
-        if((transform.position - PlayerManager.instance.GetPosition()).magnitude < 10)
+        if((transform.position - PlayerManager.instance.GetPosition()).magnitude < 10f && Input.GetKeyDown(KeyCode.E))
         {
             for(int i = 0; i < indexs.Length; i++)
             {
