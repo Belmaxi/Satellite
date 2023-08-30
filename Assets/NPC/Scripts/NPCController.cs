@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class NPCController : MonoBehaviour
 {
-    public int index;
+    public int[] indexs;
     void Update()
     {
         if((transform.position - PlayerManager.instance.GetPosition()).magnitude < 10)
         {
-            DialogManager.instance.ShowDialog(index);
+            for(int i = 0; i < indexs.Length; i++)
+            {
+                if (DialogManager.instance.GetDialogIndex() == indexs[i])
+                {
+                    DialogManager.instance.ShowDialog(DialogManager.instance.GetDialogIndex());
+                }
+            }
         }
     }
 }

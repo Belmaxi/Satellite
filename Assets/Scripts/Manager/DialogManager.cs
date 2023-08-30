@@ -9,6 +9,7 @@ public class DialogManager : MonoBehaviour
     public List<List<string>> list  = new List<List<string>>();
     public GameObject dialog;
     private List<string> str = new List<string>();
+    private int index = 0;
 
     private Dialog dia;
 
@@ -49,7 +50,19 @@ public class DialogManager : MonoBehaviour
 
     public void ShowDialog(int index)
     {
+        if(index < 0 || index >= list.Count) { return; }
         dia.SetDialog(list[index]);
+        NextDialog();
+    }
+
+    public void NextDialog()
+    {
+        index++;
+    }
+
+    public int GetDialogIndex()
+    {
+        return index;
     }
 
 }
