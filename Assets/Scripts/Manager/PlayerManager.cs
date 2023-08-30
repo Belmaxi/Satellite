@@ -22,4 +22,13 @@ public class PlayerManager : MonoBehaviour
     {
         player.Resume();
     }
+
+    /// <summary>
+    /// 获取玩家的位置
+    /// </summary>
+    /// <returns></returns>
+    public Vector3 GetPosition()
+    {
+        return player.gameObject.transform.position;
+    }
 }
