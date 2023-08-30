@@ -14,4 +14,17 @@ public class MenuManager : MonoBehaviour
         instance = this; 
     }
 
+    private void Start()
+    {
+        
+    }
+
+    /// <summary>
+    /// 展示游戏开始之前的过幕动画
+    /// </summary>
+    private void ShowBackGround()
+    {
+
+
+    }
 }
