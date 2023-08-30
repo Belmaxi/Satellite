@@ -13,7 +13,6 @@ public class PlayerController : MonoBehaviour
     State state = State.Idel;
     public float speed = 15f;
     private Rigidbody2D rb;
-    private bool isPicked = false;
     private Item pick;
     public Camera cameraInScene;
     private Animator m_animator;
