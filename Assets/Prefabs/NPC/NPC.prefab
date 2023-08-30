@@ -10,10 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5955507984332523694}
   - component: {fileID: 2189127849819973465}
-  - component: {fileID: 8487846368583110891}
-  - component: {fileID: 4906023113625860526}
-  - component: {fileID: 7784060040258090665}
-  - component: {fileID: 2339946058065898188}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Npc
@@ -89,58 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8487846368583110891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3728210974224684055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2836f71a499b04345adb620b293d35f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  indexs: 0100000002000000030000000700000008000000
---- !u!114 &4906023113625860526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3728210974224684055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2836f71a499b04345adb620b293d35f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  indexs: 09000000
---- !u!114 &7784060040258090665
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3728210974224684055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2836f71a499b04345adb620b293d35f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  indexs: 00000000
---- !u!114 &2339946058065898188
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3728210974224684055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2836f71a499b04345adb620b293d35f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  indexs: 040000000500000006000000
 --- !u!1 &7007203011310795838
 GameObject:
   m_ObjectHideFlags: 0
