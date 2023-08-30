@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEditor.MemoryProfiler;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DialogManager : MonoBehaviour
 {
@@ -20,7 +20,7 @@ public class DialogManager : MonoBehaviour
      
     }
 
-    private void Insert(int pos,string message)
+    private void Insert(int pos,string message,UnityAction fun = null)
     {
         while(pos >= list.Count) {
             list.Add(new List<string>());
@@ -30,7 +30,6 @@ public class DialogManager : MonoBehaviour
     private void Start()
     {
         dia = dialog.GetComponent<Dialog>();
-        print(dia);
         Insert(0, "研究员你好，我是此次卫星制作的总负责人我将引导你完成卫星的制作。现在，发动机的制作出现了一些问题，请你去制造厂看看吧！"); //玩家进入制造厂后
         Insert(1, "你来了，我们开始制作发动机吧，请将收集到的材料放置到制造台旁（空格拾起）。");//完成发动机拼装小游戏EngineAseembleGame后
         Insert(2, "发动机的拼装已经完成，请与熔炼炉互动进行蒙皮的制作。");//完成蒙皮制作小游戏EngineAseembleGame后
@@ -43,14 +42,10 @@ public class DialogManager : MonoBehaviour
         Insert(9, "与控制台互动进行火箭的发射。");
     }
 
-    public void ShowDialog(int index)
+    public void ShowDialog()
     {
-        List<string> tmp = new List<string>();
-        for(int i = 0; i < list[index].Count; i++)
-        {
-            tmp.Add(list[index][i]);
-        }
-        dia.SetDialog(tmp);
+        print(index);
+        dia.SetDialog(list[index]);
         NextDialog();
     }
 
