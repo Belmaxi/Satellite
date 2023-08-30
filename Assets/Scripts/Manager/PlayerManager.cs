@@ -29,6 +29,7 @@ public class PlayerManager : MonoBehaviour
     /// <returns></returns>
     public Vector3 GetPosition()
     {
+        return Vector3.zero;
         return player.gameObject.transform.position;
     }
 }
