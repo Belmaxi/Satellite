@@ -50,8 +50,8 @@ public class PlayerController : MonoBehaviour
 
     void Move()
     {
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
         if (horizontal > 0)
         {
             m_animator.SetBool("IdelRight", false);
