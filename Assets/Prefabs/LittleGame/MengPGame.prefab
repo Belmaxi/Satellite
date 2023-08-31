@@ -3361,7 +3361,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 731bae61b3349b04d9b2e1715ce9e7a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerBar: {fileID: 7497269564207626276}
   speed: 0.1
   power: 0.05
   downLimit: 0.5
   upLimit: 0.9
+  timer: 8

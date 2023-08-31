@@ -6,18 +6,20 @@ using UnityEngine.UI;
 public class TempController : MonoBehaviour
 {
     private Scrollbar bar;
+    public Image timerBar;
     public float speed = 1f;
     public float power = 0.1f;
 
     public float downLimit = 0.5f;
     public float upLimit = 0.9f;
 
-    private float timer = 0f;
+    public float timer = 8f;
     private void Start()
     {
+        StartCoroutine(DoTimeDecline());
         bar = GetComponentInChildren<Scrollbar>();
         bar.size = 0.7f;
-        timer = 0f;
+        timer = 8f;
     }
     void Update()
     {
@@ -39,7 +41,6 @@ public class TempController : MonoBehaviour
 
     void Jump()
     {
-        timer += Time.deltaTime;
         if (Input.GetKeyDown(KeyCode.J))
         {
             bar.size += power;
@@ -48,13 +49,24 @@ public class TempController : MonoBehaviour
 
     bool isok()
     {
-        if(timer > 10f)
+        if(timerBar.fillAmount < 0.01f)
         {
             return true;
         }
         else
         {
             return false;
+        }
+    }
+
+    IEnumerator DoTimeDecline()
+    {
+        float tmpTimer = timer;
+        while (timer > 0)
+        {
+            timer -= Time.deltaTime;
+            timerBar.fillAmount = timer / tmpTimer;
+            yield return new WaitForSeconds(Time.deltaTime);
         }
     }
 }
