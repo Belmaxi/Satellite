@@ -6,10 +6,12 @@ public class Detector : MonoBehaviour
 {
     public List<GameObject> whiteList;
     public int rightObject;
-    public GameObject targetGame;
+    private bool isoked = false;
+    public NPCController targetNPC;
 
     private void Update()
     {
+        if (isoked) return;
         for (int i = 0; i < whiteList.Count; i++)
         {
             GameObject obj = whiteList[i];
@@ -20,7 +22,13 @@ public class Detector : MonoBehaviour
                 {
                     if (isok(i))
                     {
-                        Destroy(obj);
+                        isoked = true;
+                        for(int j = 0; j < whiteList.Count; j++)
+                        {
+                            if (i == j) continue;
+                            Destroy(whiteList[j]);
+                        }
+                        targetNPC.ShowMark();
                     }
                     return;
                 }

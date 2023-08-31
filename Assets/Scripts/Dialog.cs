@@ -40,4 +40,9 @@ public class Dialog : MonoBehaviour
         DialogText.text = DialogTextList[currentIndex];
     }
 
+    private void OnDisable()
+    {
+        NPCManager.instance.UpdateMark();
+    }
+
 }
