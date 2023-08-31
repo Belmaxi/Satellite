@@ -6,6 +6,10 @@ public class Furnace : DeviceBase
 {
     public override void Active()
     {
-        throw new System.NotImplementedException();
+        if (!LittleGameManager.instance.GetAchieveState(AchieveState.mengp))
+        {
+            Instantiate(popObject);
+            PlayerManager.instance.Stop();
+        }
     }
 }

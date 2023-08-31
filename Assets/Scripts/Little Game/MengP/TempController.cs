@@ -11,10 +11,13 @@ public class TempController : MonoBehaviour
 
     public float downLimit = 0.5f;
     public float upLimit = 0.9f;
+
+    private float timer = 0f;
     private void Start()
     {
         bar = GetComponentInChildren<Scrollbar>();
         bar.size = 0.7f;
+        timer = 0f;
     }
     void Update()
     {
@@ -22,16 +25,36 @@ public class TempController : MonoBehaviour
         if(bar.size <= downLimit || bar.size >= upLimit)
         {
             Destroy(gameObject.transform.parent.gameObject);
+            PlayerManager.instance.Resume();
         }
         Jump();
+        if (isok())
+        {
+            Destroy(gameObject.transform.parent.gameObject);
+            PlayerManager.instance.Resume();
+            LittleGameManager.instance.Achieve(AchieveState.mengp);
+        }
+
     }
 
     void Jump()
     {
-        if(Input.GetKeyDown(KeyCode.J))
+        timer += Time.deltaTime;
+        if (Input.GetKeyDown(KeyCode.J))
         {
             bar.size += power;
         }
     }
 
+    bool isok()
+    {
+        if(timer > 10f)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }
