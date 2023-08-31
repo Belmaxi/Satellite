@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class MenuManager : MonoBehaviour
@@ -8,6 +9,7 @@ public class MenuManager : MonoBehaviour
     static public MenuManager instance;
     public GameObject menu;
     public GameObject map;
+    public GameObject startDialog;
 
     private void Awake()
     {
@@ -22,9 +24,14 @@ public class MenuManager : MonoBehaviour
     /// <summary>
     /// 展示游戏开始之前的过幕动画
     /// </summary>
-    private void ShowBackGround()
+    public void ShowBackGround()
     {
+        startDialog.SetActive(true);
+        menu.SetActive(false);
+    }
 
-
+    public void HideBackGroumd()
+    {
+        startDialog.SetActive(false);
     }
 }

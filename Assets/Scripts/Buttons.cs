@@ -10,12 +10,11 @@ public class Buttons : MonoBehaviour
     private Button button;
 
     /// <summary>
-    /// 场景从menu传送到main
+    /// 场景从menu传送到显示选地点
     /// </summary>
     public void ChangeToSelection()
     {
-        MenuManager.instance.menu.SetActive(false);
-        MenuManager.instance.map.SetActive(true);
+        StartCoroutine(DoShowDialog());
     }
 
     /// <summary>
@@ -40,6 +39,18 @@ public class Buttons : MonoBehaviour
 #else
             Application.Quit();
 #endif
+    }
+
+    IEnumerator DoShowDialog()
+    {
+        MenuManager.instance.ShowBackGround();
+        print(1);
+        yield return new WaitForSeconds(5f);
+        print(1);
+        MenuManager.instance.HideBackGroumd();
+        MenuManager.instance.menu.SetActive(false);
+        MenuManager.instance.map.SetActive(true);
+        yield return null;
     }
 
 
