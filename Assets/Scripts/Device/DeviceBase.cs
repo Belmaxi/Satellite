@@ -7,7 +7,7 @@ public abstract class DeviceBase : MonoBehaviour
     public GameObject popObject;
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && (PlayerManager.instance.GetPosition() - transform.position).magnitude < 10f)
+        if (Input.GetKeyDown(KeyCode.E) && (PlayerManager.instance.GetPosition() - transform.position).magnitude < 5f)
         {
             Active();
         }
