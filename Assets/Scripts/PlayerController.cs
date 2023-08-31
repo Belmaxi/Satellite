@@ -160,11 +160,11 @@ public class PlayerController : MonoBehaviour
     {
         if (pick != null)
         {
-            state = State.Idel;
+            state = State.Pick;
         }
         else
         {
-            state = State.Pick;
+            state = State.Idel;
         }
     }
 }

@@ -29,7 +29,6 @@ public class Buttons : MonoBehaviour
         }
         PlayerManager.instance.Resume();
         Destroy(obj);
-
     }
 
     public void Exit()
