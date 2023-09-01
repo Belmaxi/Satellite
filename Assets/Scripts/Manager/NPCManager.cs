@@ -23,6 +23,11 @@ public class NPCManager : MonoBehaviour
     {
         for(int i = 0; i < controllers.Count; i++)
         {
+            if(DialogManager.instance.GetDialogIndex()==5)
+            {
+                controllers[i].HideMark();
+                continue;
+            }
             if (controllers[i].IsNow())
             {
                 controllers[i].ShowMark();
