@@ -28,13 +28,15 @@ public class Buttons : MonoBehaviour
             return;
         }
         PlayerManager.instance.Resume();
+        NPCManager.instance.GetController(1).ShowMark();
+        ArrowManager.instance.GetArrow(0).SetActive(false);
         Destroy(obj);
     }
 
     public void CloseWindows(GameObject obj)
     {
-        Destroy(obj);
         PlayerManager.instance.Resume();
+        Destroy(obj);
     }
 
     public void Exit()
