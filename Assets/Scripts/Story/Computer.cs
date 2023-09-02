@@ -6,7 +6,11 @@ public class Computer : DeviceBase
 {
     public override void Active()
     {
-        if (LittleGameManager.instance.GetAchieveState(AchieveState.story)) return;
+        if (LittleGameManager.instance.GetAchieveState(AchieveState.story))
+        {
+            PlayerManager.instance.Resume();
+            return;
+        }
         else
         {
             Instantiate(popObject);
