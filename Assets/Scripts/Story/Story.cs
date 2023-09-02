@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 public class Story : MonoBehaviour
 {
     [SerializeField] private List<Goods> goods;
-    [SerializeField] private Text biNengObj;
-    [SerializeField] private Text massObj;
-    [SerializeField] private Text costObj;
+    [SerializeField] private TMP_Text biNengObj;
+    [SerializeField] private TMP_Text massObj;
+    [SerializeField] private TMP_Text costObj;
     [SerializeField] private GameObject OK;
 
     public void OnGetClicked()
@@ -24,9 +24,9 @@ public class Story : MonoBehaviour
             mass += good.Mass;
             cost += good.Cost;
         }
-        biNengObj.text = "比能 " + biNeng.ToString() + "/100";
-        massObj.text = "质量 " + mass.ToString() + "/1000";
-        costObj.text = "金钱 " + cost.ToString() + "/2000";
+        biNengObj.text = "比能 " + biNeng.ToString() + " / 100";
+        massObj.text = "质量 " + mass.ToString() + " / 1000";
+        costObj.text = "金钱 " + cost.ToString() + " / 2000";
         if (check(biNeng,mass,cost))
         {
             OK.SetActive(true);
