@@ -44,6 +44,7 @@ public class Detector : MonoBehaviour
                                 Destroy(whiteList[j]);
                         }
                         targetNPC.ShowMark();
+                        PlayerManager.instance.Resume();
                     }
                     else
                     {

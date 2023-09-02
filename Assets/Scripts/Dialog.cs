@@ -25,6 +25,7 @@ public class Dialog : MonoBehaviour
         else
         {
             CloseDialog();
+            PlayerManager.instance.Resume();
         }
     }
 

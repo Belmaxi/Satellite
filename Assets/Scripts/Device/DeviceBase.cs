@@ -9,6 +9,7 @@ public abstract class DeviceBase : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && (PlayerManager.instance.GetPosition() - transform.position).magnitude < 5f)
         {
+            PlayerManager.instance.Stop();
             Active();
         }
     }

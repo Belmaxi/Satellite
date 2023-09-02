@@ -13,9 +13,10 @@ public class NPCController : DeviceBase
             if (DialogManager.instance.GetDialogIndex() == so_Npc.indexs[i])
             {
                 DialogManager.instance.ShowDialog();
-                break;
+                return;
             }
         }
+        PlayerManager.instance.Resume();
     }
 
     public void ShowMark()
