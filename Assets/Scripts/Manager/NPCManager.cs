@@ -50,6 +50,12 @@ public class NPCManager : MonoBehaviour
                 case 8:
                     {
                         controllers[i].HideMark();
+                        ArrowManager.instance.GetArrow(0).SetActive(true);
+                        break;
+                    }
+                case 10:
+                    {
+                        controllers[i].HideMark();
                         ArrowManager.instance.GetArrow(2).SetActive(true);
                         break;
                     }

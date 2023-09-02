@@ -28,11 +28,12 @@ public class EngineTest : MonoBehaviour
             {
                 successTime++;
                 highLight.transform.localPosition = GetNewPosition();
-                print("flash");
                 if(successTime == 6)
                 {
-                    gameObject.SetActive(false);
+                    PlayerManager.instance.Resume();
+                    NPCManager.instance.GetController(0).ShowMark();
                     LittleGameManager.instance.Achieve(AchieveState.engine);
+                    Destroy(gameObject);
                 }
             }
             else
