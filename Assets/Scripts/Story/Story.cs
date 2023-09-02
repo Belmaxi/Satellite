@@ -47,6 +47,8 @@ public class Story : MonoBehaviour
     {
         LittleGameManager.instance.Achieve(AchieveState.story);
         PlayerManager.instance.Resume();
+        NPCManager.instance.GetController(3).ShowMark();
+        ArrowManager.instance.GetArrow(3).SetActive(false);
         Destroy(gameObject);
     }
 
