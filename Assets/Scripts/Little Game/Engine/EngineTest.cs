@@ -31,7 +31,8 @@ public class EngineTest : MonoBehaviour
                 if(successTime == 6)
                 {
                     PlayerManager.instance.Resume();
-                    NPCManager.instance.GetController(0).ShowMark();
+                    NPCManager.instance.GetController(1).ShowMark();
+                    ArrowManager.instance.GetArrow(0).SetActive(false);
                     LittleGameManager.instance.Achieve(AchieveState.engine);
                     Destroy(gameObject);
                 }
