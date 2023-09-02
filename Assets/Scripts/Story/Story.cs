@@ -52,7 +52,7 @@ public class Story : MonoBehaviour
 
     private bool check(int biNeng,int mass,int cost)
     {
-        if(biNeng <= 100 && mass<=1000 && cost <= 2000)
+        if(biNeng >= 100 && mass<=1000 && cost <= 2000)
         {
             return true;
         }
