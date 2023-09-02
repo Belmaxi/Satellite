@@ -20,6 +20,7 @@ public class Story : MonoBehaviour
         for(int i=0;i<goods.Count; i++)
         {
             Goods good = goods[i];
+            print(good.Number);
             biNeng += good.BiNeng * good.Number;
             mass += good.Mass * good.Number;
             cost += good.Cost * good.Number;
