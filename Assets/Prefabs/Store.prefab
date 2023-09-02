@@ -526,7 +526,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1400145150785252719}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8583202580947510933}
+        m_TargetAssemblyTypeName: Story, Assembly-CSharp
+        m_MethodName: OnOKClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &808399808573411457
 GameObject:
   m_ObjectHideFlags: 0
@@ -1244,6 +1256,7 @@ GameObject:
   - component: {fileID: 7965954994572831816}
   - component: {fileID: 6953463127468237918}
   - component: {fileID: 7551805272404831819}
+  - component: {fileID: 5772704394430926038}
   m_Layer: 5
   m_Name: firstgoods
   m_TagString: Untagged
@@ -1312,6 +1325,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5772704394430926038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799017987025907220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19c3348a10ef1dd4299d18a014943379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  biNeng: 0
+  mass: 0
+  cost: 0
 --- !u!1 &1921532002554983671
 GameObject:
   m_ObjectHideFlags: 0
@@ -1323,6 +1351,7 @@ GameObject:
   - component: {fileID: 3739763951184802539}
   - component: {fileID: 3407559554651129398}
   - component: {fileID: 6547117683778906170}
+  - component: {fileID: 6180934844897956998}
   m_Layer: 5
   m_Name: thirdgoods
   m_TagString: Untagged
@@ -1391,6 +1420,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6180934844897956998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921532002554983671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19c3348a10ef1dd4299d18a014943379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  biNeng: 0
+  mass: 0
+  cost: 0
 --- !u!1 &2000581104744381314
 GameObject:
   m_ObjectHideFlags: 0
@@ -1541,6 +1585,7 @@ GameObject:
   - component: {fileID: 2092809275338858640}
   - component: {fileID: 2092809275338858641}
   - component: {fileID: 2092809275338858646}
+  - component: {fileID: 8583202580947510933}
   m_Layer: 5
   m_Name: Store
   m_TagString: Untagged
@@ -1631,6 +1676,23 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &8583202580947510933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092809275338858647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcc190184d12d2448b5e9709359e3347, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goods: []
+  biNengObj: {fileID: 0}
+  massObj: {fileID: 0}
+  costObj: {fileID: 0}
+  OK: {fileID: 0}
 --- !u!1 &2105509625667751477
 GameObject:
   m_ObjectHideFlags: 0
@@ -2214,7 +2276,19 @@ MonoBehaviour:
       m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5772704394430926038}
+        m_TargetAssemblyTypeName: Goods, Assembly-CSharp
+        m_MethodName: OnValueChanged
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnTouchScreenKeyboardStatusChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2667,6 +2741,7 @@ GameObject:
   - component: {fileID: 3059068440623876084}
   - component: {fileID: 903960888416221806}
   - component: {fileID: 8606154929297536009}
+  - component: {fileID: 344690544376879408}
   m_Layer: 5
   m_Name: forthgoods
   m_TagString: Untagged
@@ -2735,6 +2810,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &344690544376879408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3094907257661899872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19c3348a10ef1dd4299d18a014943379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  biNeng: 0
+  mass: 0
+  cost: 0
 --- !u!1 &3365384153366242330
 GameObject:
   m_ObjectHideFlags: 0
@@ -2855,7 +2945,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 74488052314533509}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8583202580947510933}
+        m_TargetAssemblyTypeName: Story, Assembly-CSharp
+        m_MethodName: OnGetClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3431241121440935606
 GameObject:
   m_ObjectHideFlags: 0
@@ -3184,7 +3286,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8431106107491128978}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8583202580947510933}
+        m_TargetAssemblyTypeName: Story, Assembly-CSharp
+        m_MethodName: OnCloseClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3623037318880992519
 GameObject:
   m_ObjectHideFlags: 0
@@ -4318,6 +4432,7 @@ GameObject:
   - component: {fileID: 6172013865639199064}
   - component: {fileID: 3814873457060469574}
   - component: {fileID: 2844393660920566328}
+  - component: {fileID: 833302336969016963}
   m_Layer: 5
   m_Name: secondgoods
   m_TagString: Untagged
@@ -4386,6 +4501,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &833302336969016963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5541570940459513119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19c3348a10ef1dd4299d18a014943379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  biNeng: 0
+  mass: 0
+  cost: 0
 --- !u!1 &5640901205321880158
 GameObject:
   m_ObjectHideFlags: 0

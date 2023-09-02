@@ -7,12 +7,13 @@ public enum AchieveState
     puzzle,
     engine,
     mengp,
+    story,
 }
 public class LittleGameManager : MonoBehaviour
 {
     
     public static LittleGameManager instance;
-    public bool[] stateList = new bool[6];
+    public bool[] stateList = new bool[10];
     
     private void Awake()
     {
