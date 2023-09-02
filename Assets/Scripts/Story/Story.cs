@@ -20,7 +20,6 @@ public class Story : MonoBehaviour
         for(int i=0;i<goods.Count; i++)
         {
             Goods good = goods[i];
-            print(good.Number);
             biNeng += good.BiNeng * good.Number;
             mass += good.Mass * good.Number;
             cost += good.Cost * good.Number;
@@ -53,7 +52,35 @@ public class Story : MonoBehaviour
 
     private bool check(int biNeng,int mass,int cost)
     {
-        if(biNeng >= 100 && mass<=1000 && cost <= 2000)
+        int cnt = 0;
+        if(biNeng >= 100)
+        {
+            cnt++;
+            biNengObj.color = Color.green;
+        }
+        else
+        {
+            biNengObj.color= Color.red;
+        }
+        if (mass <= 1000)
+        {
+            cnt++;
+            massObj.color = Color.green;
+        }
+        else
+        {
+            massObj.color = Color.red;
+        }
+        if (cost <= 2000)
+        {
+            cnt++;
+            costObj.color = Color.green;
+        }
+        else
+        {
+            costObj.color = Color.red;
+        }
+        if (cnt==3)
         {
             return true;
         }
