@@ -31,6 +31,12 @@ public class Buttons : MonoBehaviour
         Destroy(obj);
     }
 
+    public void CloseWindows(GameObject obj)
+    {
+        Destroy(obj);
+        PlayerManager.instance.Resume();
+    }
+
     public void Exit()
     {
 #if UNITY_EDITOR
