@@ -26,15 +26,17 @@ public class TempController : MonoBehaviour
         bar.size -= speed * Time.deltaTime;
         if(bar.size <= downLimit || bar.size >= upLimit)
         {
-            Destroy(gameObject.transform.parent.gameObject);
             PlayerManager.instance.Resume();
+            Destroy(gameObject.transform.parent.gameObject);
         }
         Jump();
         if (isok())
         {
-            Destroy(gameObject.transform.parent.gameObject);
             PlayerManager.instance.Resume();
             LittleGameManager.instance.Achieve(AchieveState.mengp);
+            NPCManager.instance.GetController(1).ShowMark();
+            ArrowManager.instance.GetArrow(1).SetActive(false);
+            Destroy(gameObject.transform.parent.gameObject);
         }
 
     }
