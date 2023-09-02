@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,7 +9,7 @@ public class Goods : MonoBehaviour
     [SerializeField] private int biNeng = 0;
     [SerializeField] private int mass = 0;
     [SerializeField] private int cost = 0;
-    private InputField inputField = null;
+    private TMP_InputField inputField = null;
 
 
     private int number = 0;
@@ -20,7 +21,7 @@ public class Goods : MonoBehaviour
 
     private void Start()
     {
-        inputField = GetComponentInChildren<InputField>();
+        inputField = GetComponentInChildren<TMP_InputField>();
     }
     public void OnValueChanged()
     {
