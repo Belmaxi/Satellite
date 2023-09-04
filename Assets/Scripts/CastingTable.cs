@@ -31,6 +31,7 @@ public class CastingTable : MonoBehaviour
                 Item item = obj.GetComponent<Item>();
                 if(!item.IsPicked && (item.transform.position-transform.position).magnitude < 4f)
                 {
+                    SoundManager.instance.PlaySound("Tap");
                     whiteList.Remove(obj);
                     Destroy(obj);
                     Cnt++;

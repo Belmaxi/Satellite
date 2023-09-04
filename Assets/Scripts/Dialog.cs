@@ -17,6 +17,7 @@ public class Dialog : MonoBehaviour
 
     public void ContinueDialog()    //点击Continue按钮执行；继续下句话
     {
+        SoundManager.instance.PlaySound("click");
         currentIndex++;
         if (currentIndex < DialogTextList.Count)
         {

@@ -15,4 +15,9 @@ public class GameManager : MonoBehaviour
         Instance = this;
         config = Resources.Load<GameConfig>("GameConfig");
     }
+
+    private void Start()
+    {
+        SoundManager.instance.PlayMusic("Insidebgm");
+    }
 }

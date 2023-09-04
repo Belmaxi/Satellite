@@ -134,6 +134,7 @@ public class PlayerController : MonoBehaviour
             {
                 return;
             }
+            SoundManager.instance.PlaySound("pickitem");
             state = State.Pick;
             list[0].IsPicked = true;
             pick = list[0];
