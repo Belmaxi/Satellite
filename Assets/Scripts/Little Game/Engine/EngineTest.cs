@@ -22,11 +22,12 @@ public class EngineTest : MonoBehaviour
     private bool onError = false;
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.F) && !onError)
+        if(Input.GetKeyDown(KeyCode.J) && !onError)
         {
             if(Mathf.Abs(arrow.transform.localPosition.x - highLight.transform.localPosition.x) <= range)
             {
                 successTime++;
+                SoundManager.instance.PlaySound("rightchoice");
                 highLight.transform.localPosition = GetNewPosition();
                 if(successTime == 6)
                 {

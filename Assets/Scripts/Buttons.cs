@@ -38,6 +38,7 @@ public class Buttons : MonoBehaviour
     public void CloseWindows(GameObject obj)
     {
         PlayerManager.instance.Resume();
+        SoundManager.instance.PlaySound("click");
         Destroy(obj);
     }
 
