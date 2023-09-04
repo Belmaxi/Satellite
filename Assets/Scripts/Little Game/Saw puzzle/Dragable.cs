@@ -32,6 +32,7 @@ public class Dragable : MonoBehaviour,IDragHandler,IPointerUpHandler,IPointerDow
         if((targetPos - transform.localPosition).magnitude <= 50f)
         {
             transform.localPosition = targetPos;
+            SoundManager.instance.PlaySound("rightchoice");
             IsTargeted = true;
         }
         else
@@ -41,5 +42,7 @@ public class Dragable : MonoBehaviour,IDragHandler,IPointerUpHandler,IPointerDow
         }
     }
 
-    public void OnPointerDown(PointerEventData eventData) { }
+    public void OnPointerDown(PointerEventData eventData) {
+        SoundManager.instance.PlaySound("click");    
+    }
 }

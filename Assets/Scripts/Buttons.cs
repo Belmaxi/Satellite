@@ -28,6 +28,7 @@ public class Buttons : MonoBehaviour
         {
             return;
         }
+        SoundManager.instance.PlaySound("rightchoice");
         PlayerManager.instance.Resume();
         NPCManager.instance.GetController(1).ShowMark();
         ArrowManager.instance.GetArrow(0).SetActive(false);
