@@ -15,26 +15,25 @@ public class MessageController : MonoBehaviour
 
     private void Start()
     {
-        for(int i =  0; i < strings.Count; i++)
+        StartCoroutine(DoTypeString());
+    }
+
+    IEnumerator DoTypeString()
+    {
+        for(int k = 0;k< strings.Count;k++)
         {
-            string s = strings[i];
-            DoTypeString(s);
+            string now = "";
+            string type = strings[k];
+            for (int i = 0; i < type.Length; i++)
+            {
+                yield return new WaitForSeconds(typeSpeed);
+                now = now + type[i];
+                m_Text.text = now;
+            }
+            yield return new WaitForSeconds(speed);
         }
 
         StartObj.SetActive(true);
         gameObject.SetActive(false);
-    }
-
-    IEnumerator DoTypeString(string type)
-    {
-        string now = "";
-        for(int i = 0; i < type.Length; i++)
-        {
-            yield return new WaitForSeconds(typeSpeed);
-            now = now + type[i];
-            m_Text.text = now;
-            
-        }
-        yield return new WaitForSeconds(speed);
     }
 }
