@@ -10,12 +10,11 @@ public class MessageController : MonoBehaviour
     [SerializeField] private List<string> strings = new List<string>();
     [SerializeField] private float typeSpeed;
     [SerializeField] private float speed;
-    private GameObject StartObj;
+    [SerializeField] private GameObject StartObj;
 
 
     private void Start()
     {
-        StartObj = GameObject.Find("StartCanva");
         for(int i =  0; i < strings.Count; i++)
         {
             string s = strings[i];
