@@ -43,6 +43,7 @@ public class UIPointer : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        SoundManager.instance.PlaySound("click");
         StopAllCoroutines();
         SceneManager.LoadScene("Main");   
     }

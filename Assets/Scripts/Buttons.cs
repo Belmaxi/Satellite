@@ -14,6 +14,7 @@ public class Buttons : MonoBehaviour
     /// </summary>
     public void ChangeToSelection()
     {
+        SoundManager.instance.PlaySound("click");
         StartCoroutine(DoShowDialog());
     }
 

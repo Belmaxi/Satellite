@@ -11,6 +11,7 @@ public class MessageController : MonoBehaviour
     [SerializeField] private float typeSpeed;
     [SerializeField] private float speed;
     [SerializeField] private GameObject StartObj;
+    [SerializeField] private SoundParameter soundParameter;
 
 
     private void Start()
@@ -32,7 +33,7 @@ public class MessageController : MonoBehaviour
             }
             yield return new WaitForSeconds(speed);
         }
-
+        SoundManager.instance.PlayMusic("Startbgm");
         StartObj.SetActive(true);
         gameObject.SetActive(false);
     }

@@ -6,5 +6,5 @@ using UnityEngine;
 public class SoundParameter : ScriptableObject
 {
     [Tooltip("ÒôÔ´ËØ²Ä")]
-    [SerializeField] private AudioClip m_Clip;
+    public List<AudioClip> m_Clip;
 }
