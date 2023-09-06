@@ -3498,6 +3498,6 @@ MonoBehaviour:
   speed: 0.1
   power: 0.05
   downLimit: 0.5
-  upLimit: 0.9
+  upLimit: 0.8
   timer: 8
   audioSource: {fileID: 4197060580680866583}
