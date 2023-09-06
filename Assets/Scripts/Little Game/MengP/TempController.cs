@@ -38,7 +38,8 @@ public class TempController : MonoBehaviour
             NPCManager.instance.GetController(1).ShowMark();
             ArrowManager.instance.GetArrow(1).SetActive(false);
             SoundManager.instance.PlaySound("rightchoice");
-            Destroy(gameObject.transform.parent.gameObject);
+            audioSource.Stop();
+            Destroy(gameObject.transform.parent.parent.gameObject);
         }
 
     }
@@ -72,10 +73,5 @@ public class TempController : MonoBehaviour
             timerBar.fillAmount = timer / tmpTimer;
             yield return new WaitForSeconds(Time.deltaTime);
         }
-    }
-
-    private void OnDestroy()
-    {
-        audioSource.Stop();
     }
 }
