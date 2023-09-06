@@ -8,9 +8,11 @@ public class CastingTableEngine : DeviceBase
     {
         if (LittleGameManager.instance.GetAchieveState(AchieveState.engine))
         {
+            
             PlayerManager.instance.Resume();
             return;
         }
+        
         Instantiate(popObject);
     }
 }

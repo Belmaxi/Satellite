@@ -45,6 +45,8 @@ public class Detector : MonoBehaviour
                         }
                         targetNPC.ShowMark();
                         PlayerManager.instance.Resume();
+                        SoundManager.instance.PlaySound("rightchoice");
+                        break;
                     }
                     else
                     {
@@ -53,7 +55,6 @@ public class Detector : MonoBehaviour
                         whiteList.Remove(obj);
                         break;
                     }
-                    return;
                 }
             }
         }

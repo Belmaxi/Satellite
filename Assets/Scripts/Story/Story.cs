@@ -13,7 +13,7 @@ public class Story : MonoBehaviour
 
     public void OnGetClicked()
     {
-
+        SoundManager.instance.PlaySound("click");
         int biNeng = 0;
         int mass = 0;
         int cost = 0;
@@ -29,6 +29,7 @@ public class Story : MonoBehaviour
         costObj.text = "½ðÇ® " + cost.ToString() + " / 2000";
         if (check(biNeng,mass,cost))
         {
+            SoundManager.instance.PlaySound("rightchoice");
             OK.SetActive(true);
         }
         else
@@ -39,16 +40,19 @@ public class Story : MonoBehaviour
 
     public void OnCloseClicked()
     {
+        SoundManager.instance.PlaySound("click");
         PlayerManager.instance.Resume();
         Destroy(gameObject);
     }
 
     public void OnOKClicked()
     {
+        SoundManager.instance.PlaySound("click");
         LittleGameManager.instance.Achieve(AchieveState.story);
         PlayerManager.instance.Resume();
         NPCManager.instance.GetController(3).ShowMark();
         ArrowManager.instance.GetArrow(3).SetActive(false);
+        
         Destroy(gameObject);
     }
 

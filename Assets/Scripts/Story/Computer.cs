@@ -13,6 +13,7 @@ public class Computer : DeviceBase
         }
         else
         {
+            //SoundManager.instance.PlaySound("");
             Instantiate(popObject);
         }
     }

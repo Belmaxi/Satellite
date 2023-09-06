@@ -6,6 +6,7 @@ public class Book : DeviceBase
 {
     public override void Active()
     {
+        SoundManager.instance.PlaySound("rightchoice");
         Instantiate(popObject);
     }
 }

@@ -24,8 +24,9 @@ public class SoundManager : MonoBehaviour
     public void PlaySound(string name)
     {
         AudioClip clip = Resources.Load<AudioClip>("Sound/" + name);
-
         audioSource.clip = clip;
         audioSource.PlayOneShot(clip);
     }
+
+
 }
