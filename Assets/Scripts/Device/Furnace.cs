@@ -9,7 +9,10 @@ public class Furnace : DeviceBase
         if (!LittleGameManager.instance.GetAchieveState(AchieveState.mengp))
         {
             Instantiate(popObject);
-            PlayerManager.instance.Stop();
+        }
+        else
+        {
+            PlayerManager.instance.Resume();
         }
     }
 }

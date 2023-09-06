@@ -14,9 +14,9 @@ public class TempController : MonoBehaviour
     public float upLimit = 0.9f;
 
     public float timer = 8f;
+    public AudioSource audioSource;
     private void Start()
     {
-        SoundManager.instance.PlaySound("Meltingsound");
         StartCoroutine(DoTimeDecline());
         bar = GetComponentInChildren<Scrollbar>();
         bar.size = 0.7f;
@@ -38,6 +38,7 @@ public class TempController : MonoBehaviour
             NPCManager.instance.GetController(1).ShowMark();
             ArrowManager.instance.GetArrow(1).SetActive(false);
             SoundManager.instance.PlaySound("rightchoice");
+            audioSource.Stop();
             Destroy(gameObject.transform.parent.gameObject);
         }
 
