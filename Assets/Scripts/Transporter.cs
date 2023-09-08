@@ -51,7 +51,32 @@ public class Transporter : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Transport(collision.gameObject,target);
+            StartCoroutine(DoTransport(collision.gameObject,0.5f));
         }
+    }
+
+    IEnumerator DoTransport(GameObject obj,float tm)
+    {
+        PlayerManager.instance.Stop();
+        TransportorManager.instance.blackPanel.SetActive(true);
+        float timer = 0f;
+        while (timer <= tm)
+        {
+            yield return new WaitForSeconds(Time.deltaTime);
+            TransportorManager.instance.GetPanel().color = Color.Lerp(new Color(0, 0, 0, 0), new Color(0, 0, 0, 1), timer / tm);
+            timer += Time.deltaTime;
+        }
+        yield return new WaitForSeconds(0.3f);
+        Transport(obj, target);
+        yield return new WaitForSeconds(0.3f);
+        timer = 0f;
+        while (timer <= tm)
+        {
+            yield return new WaitForSeconds(Time.deltaTime);
+            TransportorManager.instance.GetPanel().color = Color.Lerp(new Color(0, 0, 0, 1), new Color(0, 0, 0, 0), timer / tm);
+            timer += Time.deltaTime;
+        }
+        TransportorManager.instance.blackPanel.SetActive(false);
+        PlayerManager.instance.Resume();
     }
 }

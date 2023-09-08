@@ -15,7 +15,7 @@ public class Buttons : MonoBehaviour
     public void ChangeToSelection()
     {
         SoundManager.instance.PlaySound("click");
-        StartCoroutine(DoShowDialog());
+        MenuManager.instance.ShowBackGround();
     }
 
     /// <summary>
@@ -42,6 +42,14 @@ public class Buttons : MonoBehaviour
         Destroy(obj);
     }
 
+    public void SimpleCloseWindows(GameObject obj)
+    {
+        SoundManager.instance.PlaySound("click");
+        MenuManager.instance.map.SetActive(true);
+        Destroy(obj);
+    }
+
+
     public void Exit()
     {
 #if UNITY_EDITOR
@@ -54,8 +62,6 @@ public class Buttons : MonoBehaviour
     IEnumerator DoShowDialog()
     {
         MenuManager.instance.ShowBackGround();
-        yield return new WaitForSeconds(5f);
-        MenuManager.instance.HideBackGroumd();
         MenuManager.instance.menu.SetActive(false);
         MenuManager.instance.map.SetActive(true);
         yield return null;

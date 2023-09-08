@@ -30,7 +30,7 @@ public class MenuManager : MonoBehaviour
         menu.SetActive(false);
     }
 
-    public void HideBackGroumd()
+    public void HideBackGround()
     {
         startDialog.SetActive(false);
     }

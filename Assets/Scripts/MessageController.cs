@@ -30,6 +30,7 @@ public class MessageController : MonoBehaviour
                 yield return new WaitForSeconds(typeSpeed);
                 now = now + type[i];
                 m_Text.text = now;
+                SoundManager.instance.PlaySound("typecharacter");
             }
             yield return new WaitForSeconds(speed);
         }
