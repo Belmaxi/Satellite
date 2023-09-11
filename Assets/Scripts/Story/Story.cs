@@ -34,6 +34,7 @@ public class Story : MonoBehaviour
         }
         else
         {
+            SoundManager.instance.PlaySound("error");
             OK.SetActive(false);
         }
     }
