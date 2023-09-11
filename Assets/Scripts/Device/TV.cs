@@ -8,6 +8,8 @@ public class TV : DeviceBase
     [SerializeField] private VideoPlayer player;
     public override void Active()
     {
+        player.gameObject.SetActive(true);
         player.Play();
+        SoundManager.instance.StopMusic();
     }
 }
