@@ -28,7 +28,8 @@ public class TempController : MonoBehaviour
         if(bar.size <= downLimit || bar.size >= upLimit)
         {
             PlayerManager.instance.Resume();
-            Destroy(gameObject.transform.parent.gameObject);
+            SoundManager.instance.PlaySound("error");
+            Destroy(gameObject.transform.parent.parent.gameObject);
         }
         Jump();
         if (isok())
