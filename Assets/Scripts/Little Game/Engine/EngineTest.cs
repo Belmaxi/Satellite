@@ -40,6 +40,7 @@ public class EngineTest : MonoBehaviour
             }
             else
             {
+                SoundManager.instance.PlaySound("error");
                 errorTime++;
                 if(errorTime == 2)
                 {

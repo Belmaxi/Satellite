@@ -52,6 +52,7 @@ public class Detector : MonoBehaviour
                     {
                         StartCoroutine(DoFlash(1f, Color.red, 0.02f));
                         Destroy(obj);
+                        SoundManager.instance.PlaySound("error");
                         whiteList.Remove(obj);
                         break;
                     }
