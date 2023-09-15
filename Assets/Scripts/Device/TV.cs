@@ -12,4 +12,6 @@ public class TV : DeviceBase
         player.Play();
         SoundManager.instance.StopMusic();
     }
+
+    
 }
