@@ -9,6 +9,11 @@ public class Item : MonoBehaviour
     private bool pickable;
     private bool isPicked;
 
+    /// <summary>
+    /// Õ¹Ê¾¿ò
+    /// </summary>
+    public GameObject showBlock;
+
     public bool Pickable { get => pickable; set => pickable = value; }
     public bool IsPicked { get => isPicked; set => isPicked = value; }
 
@@ -26,6 +31,7 @@ public class Item : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            showBlock.SetActive(true);
             Pickable = true;
         }
     }
@@ -34,6 +40,7 @@ public class Item : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            showBlock.SetActive(false);
             Pickable = false;
         }
     }
